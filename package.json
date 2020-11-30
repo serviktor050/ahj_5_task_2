@@ -1,0 +1,42 @@
+{
+  "name": "ahj_5_task_2",
+  "version": "1.0.0",
+  "description": "Продвинутый JS в браузере. Лекция 5. Задача 2.",
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.dev.js",
+    "start:dev": "webpack-dev-server",
+    "build": "webpack --config webpack.prod.js",
+    "lint": "eslint .",
+    "test": "jest test-scripts test --passWithNoTests"
+  },
+  "main": "index.js",
+  "repository": "https://github.com/serviktor050/ahj_5_task_2",
+  "author": "serviktor050",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.12.8",
+    "@babel/core": "^7.12.9",
+    "@babel/preset-env": "^7.12.7",
+    "babel-jest": "^26.6.3",
+    "babel-loader": "^8.2.2",
+    "eslint": "^7.14.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "file-loader": "^6.2.0",
+    "html-loader": "^1.3.2",
+    "image-webpack-loader": "^7.0.1",
+    "jest": "^26.6.3",
+    "webpack": "4.44.2",
+    "webpack-cli": "3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "core-js": "3",
+    "css-loader": "^5.0.1",
+    "html-webpack-plugin": "^4.5.0",
+    "mini-css-extract-plugin": "^1.3.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "terser-webpack-plugin": "^5.0.3",
+    "webpack-merge": "^5.4.0"
+  }
+}
