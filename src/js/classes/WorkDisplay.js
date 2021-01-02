@@ -3,9 +3,9 @@ export default class WorkDisplay {
     this.tableOfGoods = document.querySelector('tbody');
   }
 
-  redrawGoods(arrProduct) {
+  redrawGoods(arrayOfProducts) {
     this.tableOfGoods.innerHTML = '';
-    for (const item of arrProduct) {
+    for (const item of arrayOfProducts) {
       const product = document.createElement('tr');
       product.dataset.id = item.id;
       product.innerHTML = `
@@ -13,10 +13,10 @@ export default class WorkDisplay {
         <td>${item.price}</td>
         <td>
           <span class="change-product pointer"></span>
-          <span class="delele-product pointer"></span>
+          <span class="delete-product pointer"></span>
         </td>
         `;
-      this.tableOfGoods.appendChild(product);
+      this.tableOfGoods.append(product);
     }
   }
 }

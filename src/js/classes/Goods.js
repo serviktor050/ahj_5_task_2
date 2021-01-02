@@ -5,11 +5,7 @@ export default class Goods {
     this.arrayOfGoods = [];
   }
 
-  addGoods(name, price) {
-    this.arrayOfGoods.push(new Product(
-      this.arrayOfGoods.length,
-      name,
-      price,
-    ));
+  addGood(name, price) {
+    this.arrayOfGoods.push(new Product(this.arrayOfGoods.length, name, price));
   }
 }

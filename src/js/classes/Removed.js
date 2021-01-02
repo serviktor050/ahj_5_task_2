@@ -6,29 +6,27 @@ export default class Removed {
     formRemoved.innerHTML = `
       <p>Удалить продукт?</p>
       <div class="buttons">
-        <div id="delete" class="button">Удалить</div>
+        <div id="delete-product" class="button">Удалить</div>
         <div id="abort-delete" class="button">Отмена</div>
       </div>
       `;
     document.body.appendChild(formRemoved);
-    this.formDelele = document.getElementById('removed');
-    this.delete = document.getElementById('delete');
-    this.aborDelete = document.getElementById('abort-delete');
+    this.formDelete = document.getElementById('removed');
+    this.deleteProduct = document.getElementById('delete-product');
+    this.abortDelete = document.getElementById('abort-delete');
   }
 
   deleteElement(callback) {
-    this.formDelele.classList.remove('hidden');
-    this.formDelele.style.top = `${(window.innerHeight
-        - this.formDelele.offsetHeight) / 2}px`;
-    this.formDelele.style.left = `${(window.innerWidth
-        - this.formDelele.offsetWidth) / 2}px`;
-    this.delete.addEventListener('click', () => {
-      this.formDelele.classList.add('hidden');
+    this.formDelete.classList.remove('hidden');
+    this.formDelete.style.top = `${(window.innerHeight - this.formDelete.offsetHeight) / 2}px`;
+    this.formDelete.style.left = `${(window.innerWidth - this.formDelete.offsetWidth) / 2}px`;
+    this.deleteProduct.addEventListener('click', () => {
+      this.formDelete.classList.add('hidden');
       callback();
     });
 
-    this.aborDelet.addEventListener('click', () => {
-      this.formDelele.classList.add('hidden');
+    this.abortDelete.addEventListener('click', () => {
+      this.formDelete.classList.add('hidden');
     });
   }
 }

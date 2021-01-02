@@ -1,3 +1,3 @@
-export default function initData(arrData) {
-  arrData.addGoods('iPhone XR', 60000);
+export default function initData(arrayOfData) {
+  arrayOfData.addGood('iPhone XR', 60000);
 }

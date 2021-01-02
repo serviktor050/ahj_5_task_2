@@ -1,36 +1,30 @@
 * {
-    margin: 0 auto;
-    box-sizing: border-box;
-  }
-
-body {
-    background-color: aqua;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .form-goods {
-    width: 500px;
-  }
+  width: 500px;
+}
 
 .head-goods {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-  }
+  display: flex;
+  padding: 10px 0;
+}
 
 .pointer {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    cursor: pointer;
-    background-size: cover;
-  }
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+  background-size: cover;
+}
 
-  .table-goods {
-    width: 100%;
-    border: 1px solid;
-    padding: 10px;
-  }
-
+.table-goods {
+  width: 100%;
+  border: 1px solid;
+  padding: 10px;
+}
   
 .table-goods td {
   padding: 5px 0;

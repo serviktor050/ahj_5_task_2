@@ -2,32 +2,32 @@ export default class Popovers {
   constructor(parentElement) {
     this.parentElement = parentElement;
     this.elementPopup = document.createElement('div');
-    this.saveProduct = '';
+    this.sProduct = '';
   }
 
   get htmlElement() {
     return `
-        <p>Название</p>
-        <input type="text" id="inputText" class="input" value="">
-        <p>Стоимость</p>
-        <input type="number" id="inputPrice" class="input" value="" min="1">
-        <div class="buttons">
-          <div id="buttonSave" class="button">Сохранить</div>
-          <div id="buttonCancel" class="button">Отмена</div>
-        </div>
-      `;
+      <p>Название</p>
+      <input type="text" id="input-text" class="input" value="">
+      <p>Стоимость</p>
+      <input type="number" id="input-price" class="input" value="" min="1">
+      <div class="buttons">
+        <div id="button-save" class="button">Сохранить</div>
+        <div id="button-cancel" class="button">Отмена</div>
+      </div>
+    `;
   }
 
-  addErrorElement(parentElement) {
+  addErrorElement() {
     const error = document.createElement('div');
     error.id = 'form-error';
     error.className = 'form-error hidden';
     error.textContent = 'Error';
-    parentElement.appendChild(error);
+    this.parentElement.appendChild(error);
   }
 
-  savedProduct(callback) {
-    this.saveProduct = callback;
+  saveProduct(callback) {
+    this.sProduct = callback;
   }
 
   bindToDOM() {
@@ -42,19 +42,17 @@ export default class Popovers {
 
   showPopup() {
     this.selectPopup.classList.remove('hidden');
-    this.selectPopup.style.top = `${(window.innerHeight
-        - this.selectPopup.offsetHeight) / 2}px`;
-    this.selectPopup.style.left = `${(window.innerWidth
-        - this.selectPopup.offsetWidth) / 2}px`;
+    this.selectPopup.style.top = `${(window.innerHeight - this.selectPopup.offsetHeight) / 2}px`;
+    this.selectPopup.style.left = `${(window.innerWidth - this.selectPopup.offsetWidth) / 2}px`;
   }
 
   constants() {
-    this.selectPopup = document.querySelector('#popup');
-    this.inputText = document.getElementById('inputText');
-    this.inputPrice = document.getElementById('inputPrice');
-    this.buttonSave = document.getElementById('buttonSave');
-    this.buttonCancel = document.getElementById('buttonCancel');
-    this.elementError = document.querySelector('#form-error');
+    this.selectPopup = document.getElementById('popup');
+    this.inputText = document.getElementById('input-text');
+    this.inputPrice = document.getElementById('input-price');
+    this.buttonSave = document.getElementById('button-save');
+    this.buttonCancel = document.getElementById('button-cancel');
+    this.elementError = document.getElementById('form-error');
   }
 
   eventsPopup() {
@@ -70,7 +68,6 @@ export default class Popovers {
         this.showError(this.inputPrice, 'Введите стоимость!');
         return;
       }
-
       this.selectPopup.classList.add('hidden');
       this.sProduct();
       this.clearInput();
