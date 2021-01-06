@@ -1,0 +1,112 @@
+* {
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.form-goods {
+  width: 500px;
+}
+
+.head-goods {
+  display: flex;
+  padding: 10px 0;
+}
+
+.pointer {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+  background-size: cover;
+}
+
+.table-goods {
+  width: 100%;
+  border: 1px solid;
+  padding: 10px;
+}
+  
+.table-goods td {
+  padding: 5px 0;
+}
+
+.change-product {
+  background-image: url(/7c4ebc5aa8a5c56cf8ad1e7eda8dd155.png);
+}
+
+.delete-product {
+  background-image: url(/e700c83ea2b6fa58fa94a5af6ac43489.png);
+}
+
+.popup {
+  width: 300px;
+  border: 1px solid black;
+  padding: 10px 20px;
+  position: fixed;
+  background-color: white;
+}
+
+.popup p {
+  padding: 10px 0;
+}
+
+.input {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding-left: 10px;
+  height: 25px;
+  width: 100%;
+}
+
+.input:focus {
+  outline: none;
+  border: 2px solid blue;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 0;
+}
+
+.button {
+  width: 110px;
+  height: 25px;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.button:first-child {
+  margin-right: 10px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.form-error {
+  position: absolute;
+  border: 1px solid black;
+  margin-top: 10px;
+  background-color: white;
+  padding: 10px;
+}
+
+.form-error::before, .form-error::after {
+  content: '';
+  position: absolute;
+  border: 10px solid transparent;
+  border-bottom: 10px solid black;
+  top: -20px;
+  left: calc(50% - 10px);
+}
+
+.form-error::after {
+  content: '';
+  border-bottom: 10px solid white;
+  top: -19px;
+}
